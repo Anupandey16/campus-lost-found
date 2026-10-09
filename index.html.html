@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Lost & Found</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🎓 Campus Lost & Found</h1>
+    <p>Find it • Report it • Return it</p>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('report')">Report Item</button>
+    <button onclick="showSection('items')">View Items</button>
+</nav>
+
+
+<!-- HOME SECTION -->
+<section id="home" class="section active">
+
+    <div class="hero">
+
+        <h2>Welcome to Campus Lost & Found</h2>
+
+        <p>
+            Lost something on campus?
+            Or found something belonging to another student?
+            Report it here and help return it to its owner.
+        </p>
+
+        <button
+            class="main-btn"
+            onclick="showSection('report')">
+            Report an Item
+        </button>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🔎</div>
+            <h3>Report Lost Item</h3>
+            <p>
+                Report your lost ID card, wallet,
+                books, keys or other belongings.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">📦</div>
+            <h3>Report Found Item</h3>
+            <p>
+                Found something on campus?
+                Report it so the owner can find it.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🤝</div>
+            <h3>Return Item</h3>
+            <p>
+                Help students reconnect with
+                their lost belongings.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REPORT SECTION -->
+<section id="report" class="section">
+
+    <div class="form-box">
+
+        <h2>Report Lost / Found Item</h2>
+
+        <form id="itemForm">
+
+            <label for="itemName">
+                Item Name
+            </label>
+
+            <input
+                type="text"
+                id="itemName"
+                placeholder="Example: College ID Card"
+                required
+            >
+
+
+            <label for="itemType">
+                Item Type
+            </label>
+
+            <select id="itemType" required>
+
+                <option value="">
+                    Select
+                </option>
+
+                <option value="Lost">
+                    Lost
+                </option>
+
+                <option value="Found">
+                    Found
+                </option>
+
+            </select>
+
+
+            <label for="description">
+                Description
+            </label>
+
+            <textarea
+                id="description"
+                placeholder="Describe the item..."
+                required
+            ></textarea>
+
+
+            <label for="location">
+                Location
+            </label>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Example: Library"
+                required
+            >
+
+
+            <label for="date">
+                Date
+            </label>
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+
+            <label for="contact">
+                Contact
+            </label>
+
+            <input
+                type="text"
+                id="contact"
+                placeholder="Phone or Email"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="main-btn">
+                Submit Report
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ITEMS SECTION -->
+<section id="items" class="section">
+
+    <h2 class="section-title">
+        Reported Items
+    </h2>
+
+
+    <input
+        type="text"
+        id="search"
+        class="search"
+        placeholder="🔎 Search by item name..."
+        onkeyup="displayItems()"
+    >
+
+
+    <div id="itemList"></div>
+
+</section>
+
+
+<footer>
+
+    <h3>Campus Lost & Found</h3>
+
+    <p>
+        Mini Project - IT 3rd Semester
+    </p>
+
+    <p>
+        © 2026 Campus Lost & Found
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
